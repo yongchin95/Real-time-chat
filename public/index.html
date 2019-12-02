@@ -23,7 +23,17 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
-    var socket = io();
+</script>
+
+<script>
+    const socket = io();
+//récupérer le pseudo de l'utilisateur
+    let pseudo = window.prompt('Indiquez votre pseudo', 'anonymous');
+    if (pseudo != ""){
+    console.log(pseudo);
+    socket.emit('pseudo', pseudo);
+    };
+//récupérer les inputs du formulaire
     $('form').submit(function(e){
           e.preventDefault(); // prevents page reloading
           socket.emit('chat message', $('#m').val());
