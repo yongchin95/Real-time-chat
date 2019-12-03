@@ -1,8 +1,23 @@
+require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 const http = require('http');
 var server = http.createServer(app);
 const io = require('socket.io').listen(server);
+
+//connect to db
+
+mongoose
+  .connect(process.env.DB_CONNECT,  { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+  })
+  
+  .then(test => {
+    console.log('Connectedbg');
+  })
+  .catch(err => console.log('Failed to connect bg'));
 
 
 server.listen(3000, function(){
