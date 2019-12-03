@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>PepeChat</title>
+    <title>Be-Chat</title>
   </head>
   <body>
-    <h1>PepeChat</h1>
-    <ul id="messages"></ul>
+    <header>
+        <h1>Be-Chat</h1>
+    </header>
+    <div>
+        <ul id="messages"></ul>
+    </div>
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="m" autocomplete="off" placeholder="Type your message..."/><button><img class="sendingImg" src="assets/img/send.svg" alt="white arrow img"></button>
     </form>
-
-
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="assets/js/script.js"></script>
+<!---<script src='node_modules/marked/lib/marked.js'></script>
+-->
   </body>
 </html>
