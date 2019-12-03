@@ -3,6 +3,7 @@ const app = express();
 const http = require('http');
 var server = http.createServer(app);
 const io = require('socket.io').listen(server);
+const marked = require('marked');
 
 
 server.listen(3000, function(){
@@ -17,7 +18,7 @@ io.on('connection', function(socket){
     let pseudo = "";
     const stockagepseudo = function(clientvar){
     const pseudoserver = clientvar;
-    socket.emit('chat message', 'Hi '+ pseudoserver);
+    socket.emit('chat message', marked('*Bienvenue* '+ pseudoserver));
     pseudo = pseudoserver;
     };
     //fonction lancée en cas d'event pseudo
@@ -28,7 +29,7 @@ io.on('connection', function(socket){
     });
     // send chat messages back to the clientside
     socket.on('chat message', function(msg, stockagepseudo){
-    io.emit('chat message', pseudo +" : " + msg);
+    io.emit('chat message', pseudo +" : " + marked(msg));
     console.log('message: ' + msg);
     });
 });
