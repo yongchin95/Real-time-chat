@@ -1,14 +1,16 @@
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+const express = require('express');
+const app = express();
+const http = require('http');
+var server = http.createServer(app);
+const io = require('socket.io').listen(server);
+const port = process.env.PORT || 3000;
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/public/index.html');
-});
 
-http.listen(3000, function(){
+server.listen(port , function(){
   console.log('listening on *:3000');
 });
+
+app.use(express.static('public'));
 
 io.on('connection', function(socket){
     socket.broadcast.emit('hi new user');
