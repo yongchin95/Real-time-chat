@@ -4,6 +4,7 @@
   "description": "Real time chat exercice for Becode class",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
   "repository": {

@@ -7,6 +7,7 @@ body {
   font: 13px Helvetica, Arial;
   font-size: 18px;
   margin-top: 110px;
+  margin-bottom: 110px;
   color: rgba(0, 0, 0, 0.54);
 }
 header {
