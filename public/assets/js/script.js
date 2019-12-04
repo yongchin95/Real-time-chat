@@ -1,4 +1,5 @@
 const socket = io();
+//fonction coté client pour récupérer la base de données, elle n'affiche pas encore l'objet reçu cependant
 const getdata = async () => {
     const receive = await fetch("/load");
     const receivejson = await receive.json();
