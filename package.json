@@ -4,6 +4,7 @@
   "description": "Real time chat exercice for Becode class",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -25,6 +26,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "marked": "^0.7.0",
     "mongoose": "^5.7.13",
     "socket.io": "^2.3.0"
   }
