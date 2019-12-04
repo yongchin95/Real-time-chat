@@ -11,42 +11,40 @@ const marked = require('marked');
 //connect to db
 
 mongoose
-  .connect(process.env.DB_CONNECT,  { 
+  .connect('mongodb+srv://octavia:petitchat@cluster0-qn3js.gcp.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true
   })
-  
   .then(test => {
     console.log('Connectedbg');
   })
-  .catch(err => console.log('Failed to connect bg'));
+  .catch(err => console.error(err));
 
 
-server.listen(port , function(){
+server.listen(port, function () {
   console.log('listening on *:3000');
 });
 
 app.use(express.static('public'));
 
-io.on('connection', function(socket){
-    console.log('a user connected');
-    //récupérer le pseudonyme de l'utilisateur 
-    let pseudo = "";
-    const stockagepseudo = function(clientvar){
+io.on('connection', function (socket) {
+  console.log('a user connected');
+  //récupérer le pseudonyme de l'utilisateur 
+  let pseudo = "";
+  const stockagepseudo = function (clientvar) {
     const pseudoserver = clientvar;
-    socket.emit('chat message', marked('*Bienvenue* '+ pseudoserver));
+    socket.emit('chat message', marked('*Bienvenue* ' + pseudoserver));
     pseudo = pseudoserver;
-    };
-    //fonction lancée en cas d'event pseudo
-    socket.on('pseudo', stockagepseudo);
-    //ce qu'il se passe en cas de déconnection
-    socket.on('disconnect', function(){
-        console.log('user disconnected');
-    });
-    // send chat messages back to the clientside
-    socket.on('chat message', function(msg, stockagepseudo){
-    io.emit('chat message', pseudo +" : " + marked(msg));
+  };
+  //fonction lancée en cas d'event pseudo
+  socket.on('pseudo', stockagepseudo);
+  //ce qu'il se passe en cas de déconnection
+  socket.on('disconnect', function () {
+    console.log('user disconnected');
+  });
+  // send chat messages back to the clientside
+  socket.on('chat message', function (msg, stockagepseudo) {
+    io.emit('chat message', pseudo + " : " + marked(msg));
     console.log('message: ' + msg);
-    });
+  });
 });
-
