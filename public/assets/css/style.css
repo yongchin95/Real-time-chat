@@ -75,15 +75,17 @@ form button:active {
 }
 #messages {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  display: table;
+  margin: 0px ;
+  padding: 0px;
+
 }
 #messages li {
   margin-top: 2%;
   padding: 15px 20px;
-  background-color: #F5F1F1;
+  background-color: red;
   border-radius: 15px;
-  width: 90vw;
   margin-left: 4%;
 }
+
 
