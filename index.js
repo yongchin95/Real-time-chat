@@ -7,9 +7,10 @@ var server = http.createServer(app);
 const io = require('socket.io').listen(server);
 const port = process.env.PORT || 3000;
 const marked = require('marked');
+//bodyparser is included in express
+//.urlencoded is a bodyparser stuff included in express now
 
 //connect to db
-
 mongoose
   .connect(process.env.DB_CONNECT,  { 
     useNewUrlParser: true,
