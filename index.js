@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -7,20 +6,23 @@ var server = http.createServer(app);
 const io = require('socket.io').listen(server);
 const port = process.env.PORT || 3000;
 const marked = require('marked');
+require('dotenv').config();
+// require d'apres le chemin de l'index du server
+const Content = require('./models/content')
 //bodyparser is included in express
 //.urlencoded is a bodyparser stuff included in express now
 
 //connect to db
 mongoose
-  .connect(process.env.DB_CONNECT,  { 
-    useNewUrlParser: true,
-    useUnifiedTopology: true 
-  })
-  
-  .then(test => {
+  .connect(process.env.DB_CONNECT,  
+      { useNewUrlParser: true, 
+       useUnifiedTopology: true
+      })
+.then(test => {
     console.log('Connectedbg');
   })
-  .catch(err => console.log('Failed to connect bg'));
+  .catch(err => console.log(err));
+
 
 
 server.listen(port , function(){
@@ -28,6 +30,13 @@ server.listen(port , function(){
 });
 
 app.use(express.static('public'));
+
+app.get('/', async (req, res, next) => {
+
+    const allContent = await Content.find() 
+    res.status(200).json({content:allContent})
+    socket.emit('dbqueryall', allContent);
+});
 
 io.on('connection', function(socket){
     console.log('a user connected');

@@ -17,4 +17,7 @@ $('form').submit(function(e){
 socket.on('chat message', function(msg){
         $('#messages').append($('<li>').html(msg));
     });
+socket.on('dbqueryall', (allContent) => {
+        $('#messages').append($('<li>').text(msg));
+    });
 
