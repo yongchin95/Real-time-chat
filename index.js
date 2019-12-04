@@ -31,11 +31,14 @@ server.listen(port , function(){
 
 app.use(express.static('public'));
 
-app.get('/', async (req, res, next) => {
-
+app.get('/load', async (req, res, next) => {
     const allContent = await Content.find() 
-    res.status(200).json({content:allContent})
+    await res.status(200).json({content:allContent})
     socket.emit('dbqueryall', allContent);
+});
+
+app.post('/send', async (req, res, next) => {
+    console.log(req.body);
 });
 
 io.on('connection', function(socket){
