@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 body {
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
   font: 13px Helvetica, Arial;
   font-size: 18px;
   margin-top: 110px;
   margin-bottom: 110px;
   color: rgba(0, 0, 0, 0.54);
+}
+
+#wrap {
+  grid-column: 2/3;
 }
 header {
   width: 100%;
@@ -78,7 +84,7 @@ form button:active {
   margin: 0;
   padding: 0;
 }
-#messages li {
+#messages p {
   margin-top: 2%;
   padding: 15px 20px;
   background-color: #F5F1F1;
@@ -86,4 +92,5 @@ form button:active {
   width: 90vw;
   margin-left: 4%;
 }
+
 
