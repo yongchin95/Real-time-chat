@@ -15,6 +15,6 @@ $('form').submit(function(e){
     });
 //récupérer l'event chat message emis par le server    
 socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').html(msg));
+        $('#messages').html(msg);
     });
 
