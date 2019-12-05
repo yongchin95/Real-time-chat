@@ -56,5 +56,11 @@ socket.on("sendLink", function(link) {
   $("#messages").append($("<div>").html(link));
 });
 socket.on("dbqueryall", function(allContent) {
-  //$('#messages').append($('<li>').text(msg));
+  console.log(allContent);
+
+  for (i = 0; i < allContent.length; i++) {
+    $("#messages").append(
+      $("<div>").html(allContent[i].username + ": " + allContent[i].content)
+    );
+  }
 });

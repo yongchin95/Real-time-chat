@@ -38,9 +38,9 @@ app.get("/load", async (req, res, next) => {
     .limit(10);
 
   await res.status(200).json({
-    content: allContent
+    allContent
   });
-  console.log(allContent);
+
   io.emit("dbqueryall", allContent);
 });
 // comment envoyer des trucs à la base de donnée, récupérer le req.body puis tapper dans le model puis envoyer
