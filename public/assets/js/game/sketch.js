@@ -50,7 +50,7 @@ function draw() {
 
         for (let i = snakes.length - 1; i > 0; i--) {
             snakes[i].newPosition(snakes[i - 1].x, snakes[i - 1].y);
-            socket.emit('moving', snakes[i].x, snake[i].y);
+            socket.emit('moving', snakes[i].x, snakes[i].y);
             snakes[i].display();
         }
 
