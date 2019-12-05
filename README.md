@@ -93,4 +93,4 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 - socket.io docs(https://socket.io/docs/)
 
 <p align="center">
-   <img src="" alt="https://media.giphy.com/media/VObHs6oqEWFNe/giphy.gif" width="50%" />
+   <img src="https://media.giphy.com/media/VObHs6oqEWFNe/giphy.gif" alt="gif" width="50%" />
