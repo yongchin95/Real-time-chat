@@ -26,7 +26,7 @@ A team project with Mongoose DB, socket.io, node.js and JS at Becode
 - [Julien Goetghebuer](https://github.com/ggbjulien)
 
 ## Project
-You can acces the project [here]()
+You can acces the project [here](https://be-chat-y.herokuapp.com/)
 
 We will evaluate our project based on:
 
