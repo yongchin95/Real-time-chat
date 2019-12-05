@@ -15,7 +15,9 @@ if (pseudo != "") {
 };
 //récupérer les inputs du formulaire pour envoi au server
 $('form').submit(async function(e){
+
             e.preventDefault(); // eviter le reload
+            scrollToEnd();
             const regex = new RegExp("[\<\>]", "g");
             let messagePreSanit = $('#m').val();
             //console.log(messagePreSanit);
@@ -56,3 +58,10 @@ socket.on('chat message', function (msg) {
 socket.on('dbqueryall', (allContent) => {
     //$('#messages').append($('<li>').text(msg));
 });
+// auto scroll when msg is send
+function scrollToEnd () {
+    const container = document.getElementById('messages');
+    container.scrollTop = container.scrollHeight
+}
+
+
