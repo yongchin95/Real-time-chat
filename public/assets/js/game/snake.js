@@ -21,7 +21,7 @@ class Snake {
         fill(255);
         rect(this.x, this.y, cell, cell);
         socket.on('snakesPosition', (x, y) => {
-            rect(this.x, this.y, cell, cell);
+            rect(x, y, cell, cell);
         })
     }
 
