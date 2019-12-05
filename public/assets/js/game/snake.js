@@ -20,9 +20,6 @@ class Snake {
     display() {
         fill(255);
         rect(this.x, this.y, cell, cell);
-        socket.on('snakesPosition', (x, y) => {
-            rect(x, y, cell, cell);
-        })
     }
 
     keyPressed() {

@@ -8,13 +8,12 @@ let snake = new Snake();
 let fruit = new Fruit();
 let inGame = true;
 let score = 0;
-let speed = 10;
 const snakes = [];
 
 function setup() {
     let myCanvas = createCanvas(1000, 600);
     myCanvas.parent("mainDiv");
-    frameRate(speed);
+
     snakes.push(snake);
     document.getElementById("playAgain").style.display = "none";
 }
@@ -43,14 +42,10 @@ function draw() {
             } else if (score >= 50) {
                 score += 10;
             }
-            speed++;
-            frameRate(speed);
-            console.log("speed: " + speed);
         }
 
         for (let i = snakes.length - 1; i > 0; i--) {
             snakes[i].newPosition(snakes[i - 1].x, snakes[i - 1].y);
-            socket.emit('moving', snakes[i].x, snakes[i].y);
             snakes[i].display();
         }
 
