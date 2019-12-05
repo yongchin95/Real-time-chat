@@ -18,7 +18,7 @@ mongoose
       { useNewUrlParser: true, 
        useUnifiedTopology: true
       })
-.then(test => {
+  .then(test => {
     console.log('Connectedbg');
   })
   .catch(err => console.log(err));
@@ -41,13 +41,25 @@ app.get('/load', async (req, res, next) => {
 // comment envoyer des trucs à la base de donnée, récupérer le req.body puis tapper dans le model puis envoyer
 app.post('/send', async (req, res, next) => {
     //créer un nouvel objet du meme type que le schema, qui respecte ça
+
     const nouvelobjet = await new Content({
         username: req.body.username,
         content:req.body.content
     })
+
     await nouvelobjet.save();
+    console.log(nouvelobjet);
     res.status(200).json({message:'objet créé', objet:nouvelobjet});
 });
+
+app.delete('/:messageId', async (req, res) => {
+  const id = req.params.messageId;
+  const deletedProduct = await Content.deleteOne({_id:id});
+  res.json({
+    message: "C est delete mamen",
+    deleted: deletedProduct
+  })
+})
 
 io.on('connection', function(socket){
     console.log('a user connected');
