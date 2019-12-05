@@ -4,15 +4,15 @@ const getdata = async () => {
     const receive = await fetch("/load");
     const receivejson = await receive.json();
     console.log(receivejson);
-}; 
+};
 getdata();
 
 //récupérer le pseudo de l'utilisateur
 let pseudo = window.prompt('Indiquez votre pseudo', 'anonymous');
-    if (pseudo != ""){
+if (pseudo != "") {
     console.log(pseudo);
     socket.emit('pseudo', pseudo);
-    };
+};
 //récupérer les inputs du formulaire pour envoi au server
 $('form').submit(async function(e){
             e.preventDefault(); // eviter le reload
@@ -40,18 +40,19 @@ $('form').submit(async function(e){
                 },
                 body:JSON.stringify(data)
             };
-//options est un objet
+    //options est un objet
             console.log(options);
-            await fetch('/send', options)
+        const responseServer = await fetch('/send', options);
+        const object = await responseServer.json();
+        console.log(object);
 
-            return false;
-    });
+    return false;
+});
 //récupérer l'event chat message emis par le server  
-socket.on('chat message', function(msg){
+socket.on('chat message', function (msg) {
 
-        $('#messages').append($("<div>").html(msg));
-    });
+    $('#messages').append($("<div>").html(msg));
+});
 socket.on('dbqueryall', (allContent) => {
-        //$('#messages').append($('<li>').text(msg));
-    });
-
+    //$('#messages').append($('<li>').text(msg));
+});
