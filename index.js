@@ -33,15 +33,18 @@ app.use(express.json());
 app.use(express.static("public"));
 // comment recevoir des trucs de la banque de données
 app.get("/load", async (req, res, next) => {
-  const allContent = await Content.find();
+  const allContent = await Content.find()
+    .sort({ timestamp: "desc" })
+    .limit(10);
+
   await res.status(200).json({
     content: allContent
   });
+  console.log(allContent);
   io.emit("dbqueryall", allContent);
 });
 // comment envoyer des trucs à la base de donnée, récupérer le req.body puis tapper dans le model puis envoyer
 app.post("/send", async (req, res, next) => {
-  //créer un nouvel objet du meme type que le schema, qui respecte ça
   const link =
     "<a href='drawingPepeWithMyBFF.html' target='_blank'> CLICK ME</a>";
   if (req.body.content == "!drawing") {

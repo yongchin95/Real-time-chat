@@ -51,13 +51,10 @@ $("form").submit(async function(e) {
 socket.on("chat message", function(msg) {
   $("#messages").append($("<div>").html(msg));
 });
-socket.on("dbqueryall", allContent => {
-  //$('#messages').append($('<li>').text(msg));
-});
 
 socket.on("sendLink", function(link) {
   $("#messages").append($("<div>").html(link));
 });
-socket.on("dbqueryall", allContent => {
+socket.on("dbqueryall", function(allContent) {
   //$('#messages').append($('<li>').text(msg));
 });
