@@ -7,8 +7,16 @@ body {
 
 h1 {
     margin-bottom: 36px;
+    color: #09C1A0;
 }
 
 button {
     margin-bottom: 18px;
+    padding: 8px 16px 8px 16px;
+    background-color: #09C1A0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
