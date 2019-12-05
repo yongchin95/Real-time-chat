@@ -8,11 +8,11 @@ const getdata = async () => {
 getdata();
 
 //récupérer le pseudo de l'utilisateur
-// let pseudo = window.prompt('Indiquez votre pseudo', 'anonymous');
-//     if (pseudo != ""){
-//     console.log(pseudo);
-//     socket.emit('pseudo', pseudo);
-//     };
+let pseudo = window.prompt('Indiquez votre pseudo', 'anonymous');
+    if (pseudo != ""){
+    console.log(pseudo);
+    socket.emit('pseudo', pseudo);
+    };
 //récupérer les inputs du formulaire pour envoi au server
 $('form').submit(async function(e){
             e.preventDefault(); // eviter le reload
@@ -38,9 +38,10 @@ $('form').submit(async function(e){
 
             return false;
     });
-//récupérer l'event chat message emis par le server    
+//récupérer l'event chat message emis par le server  
 socket.on('chat message', function(msg){
-        $('#messages').append(msg);
+
+        $('#messages').append($("<div>").html(msg));
     });
 socket.on('dbqueryall', (allContent) => {
         //$('#messages').append($('<li>').text(msg));
