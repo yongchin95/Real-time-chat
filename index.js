@@ -11,7 +11,7 @@ require('dotenv').config();
 const Content = require('./models/content')
 //bodyparser is included in express
 //.urlencoded is a bodyparser stuff included in express now
-const snakeDotIo = io.of('/snake.html');
+const drawing = io.of('/drawingPepeWithMyBFF.html');
 
 //connect to db
 mongoose
@@ -91,9 +91,14 @@ io.on('connection', function (socket) {
   });
 });
 
-snakeDotIo.on('connection', function (socket) {
+drawing.on('connection', function (socket) {
   console.log('a player is here to play the best game ever');
-  socket.on('moving', (x, y) => {
-    snakeDotIo.emit('snakesPosition', x, y);
+  socket.on('drawing', (x, y) => {
+    console.log("X :" + x + " Y: " +
+      y);
+    socket.broadcast.emit('sendDrawing', x, y);
+  })
+  socket.on('disconnect', () => {
+    drawing.emit('refreshCanvas');
   })
 });
