@@ -54,13 +54,13 @@ socket.on("chat message", function(msg) {
 });
 
 socket.on("sendLink", function(link) {
-  $("#messages").append($("<div>").html(link));
+  $("#messages").append($("<div class='clickMe'>").html(link));
 });
 socket.on("dbqueryall", function(allContent) {
   console.log(allContent);
 
   for (i = 0; i < allContent.length; i++) {
-    $("#messages").append(
+    $("#messages").prepend(
       $("<div>").html(allContent[i].username + ": " + allContent[i].content)
     );
   }
