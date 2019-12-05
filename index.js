@@ -51,8 +51,10 @@ app.post("/send", async (req, res, next) => {
   }
   const nouvelobjet = await new Content({
     username: req.body.username,
-    content: req.body.content
+    content: req.body.content,
+    timestamp: req.body.timestamp
   });
+  //console.log(nouvelobjet);
 
   await nouvelobjet.save();
   console.log(nouvelobjet);

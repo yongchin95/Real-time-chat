@@ -16,14 +16,21 @@ if (pseudo != "") {
 //récupérer les inputs du formulaire pour envoi au server
 $("form").submit(async function(e) {
   e.preventDefault(); // eviter le reload
-  socket.emit("chat message", $("#m").val());
-  let message = $("#m").val();
-  console.log(message);
+  const regex = new RegExp("[<>]", "g");
+  let messagePreSanit = $("#m").val();
+  //console.log(messagePreSanit);
+  let messageSan = messagePreSanit.replace(regex, "");
+  //console.log(messageSan);
+  socket.emit("chat message", messageSan);
   $("#m").val("");
+  //creation du timestamp
+  let time = Math.floor(Date.now());
+  console.log(time);
   //ceci va être recupéré serverside en faisant req.body.username par ex et fourré dans le modelschema
   const data = {
     username: pseudo,
-    content: message
+    content: messageSan,
+    timestamp: time
   };
   const options = {
     method: "POST",
@@ -50,4 +57,7 @@ socket.on("dbqueryall", allContent => {
 
 socket.on("sendLink", function(link) {
   $("#messages").append($("<div>").html(link));
+});
+socket.on("dbqueryall", allContent => {
+  //$('#messages').append($('<li>').text(msg));
 });
