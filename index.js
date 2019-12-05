@@ -44,7 +44,11 @@ app.get('/load', async (req, res, next) => {
 // comment envoyer des trucs à la base de donnée, récupérer le req.body puis tapper dans le model puis envoyer
 app.post('/send', async (req, res, next) => {
   //créer un nouvel objet du meme type que le schema, qui respecte ça
-
+  if (req.body.content = "!drawing") {
+    res.json({
+      message: ("<a href='drawingPepeWithMyBFF.html'> CLICK ME</a>")
+    })
+  }
   const nouvelobjet = await new Content({
     username: req.body.username,
     content: req.body.content
