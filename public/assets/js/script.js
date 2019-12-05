@@ -16,14 +16,22 @@ let pseudo = window.prompt('Indiquez votre pseudo', 'anonymous');
 //récupérer les inputs du formulaire pour envoi au server
 $('form').submit(async function(e){
             e.preventDefault(); // eviter le reload
-            socket.emit('chat message', $('#m').val());
-            let message = $('#m').val();
-            console.log(message);
+            const regex = new RegExp("[\<\>]", "g");
+            let messagePreSanit = $('#m').val();
+            //console.log(messagePreSanit);
+            let messageSan = messagePreSanit.replace(regex, ""); 
+            //console.log(messageSan);
+            socket.emit('chat message', messageSan);
             $('#m').val('');
+    //creation du timestamp
+            let time = Math.floor(Date.now());
+            console.log(time)
     //ceci va être recupéré serverside en faisant req.body.username par ex et fourré dans le modelschema
             const data ={
                 username:pseudo,
-                content:message
+                content: messageSan,
+                timestamp: time
+
             };
             const options = {
                 method:'POST',
@@ -32,7 +40,7 @@ $('form').submit(async function(e){
                 },
                 body:JSON.stringify(data)
             };
-//opions est un objet
+//options est un objet
             console.log(options);
             await fetch('/send', options)
 

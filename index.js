@@ -41,14 +41,16 @@ app.get('/load', async (req, res, next) => {
   })
   io.emit('dbqueryall', allContent);
 });
-// comment envoyer des trucs à la base de donnée, récupérer le req.body puis tapper dans le model puis envoyer
+// comment envoyer des trucs à la base de donnée: récupérer le req.body puis tapper dans le model puis envoyer
 app.post('/send', async (req, res, next) => {
   //créer un nouvel objet du meme type que le schema, qui respecte ça
 
   const nouvelobjet = await new Content({
     username: req.body.username,
-    content: req.body.content
+    content: req.body.content,
+    timestamp: req.body.timestamp
   })
+    //console.log(nouvelobjet);
 
   await nouvelobjet.save();
   console.log(nouvelobjet);

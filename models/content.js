@@ -8,11 +8,11 @@ const contentSchema = mongoose.Schema({
         content: {
             type:String,
             required:true
-        }//,
-//        timestamp:{
-//            type:Number,
-//            required:true
-//        }
+        },
+        timestamp:{
+            type:Number,
+            required:true
+        }
 
 })
 module.exports=mongoose.model("Content", contentSchema); 
