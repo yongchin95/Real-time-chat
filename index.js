@@ -78,7 +78,7 @@ io.on('connection', function(socket){
     });
     // send chat messages back to the clientside
     socket.on('chat message', function(msg, stockagepseudo){
-    io.emit('chat message', pseudo +" : " + marked(msg));
+    io.emit('chat message', marked(pseudo +" : " + msg));
     console.log('message: ' + msg);
     });
 });

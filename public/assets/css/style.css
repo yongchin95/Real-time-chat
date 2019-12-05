@@ -8,6 +8,7 @@ body {
   font: 13px Helvetica, Arial;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.54);
+  height: 100%;
   
 }
 
@@ -17,6 +18,7 @@ header {
   z-index: 9999;
   grid-column:2/3;
   grid-row:1;
+  padding: 12px;
 }
 header h1 {
   font-weight: 75px;
@@ -29,6 +31,7 @@ form {
   grid-column: 2;
   grid-row: 3;
   background-color: white;
+  bottom: 0px;
 }
 form input {
   border: 0;
@@ -52,6 +55,8 @@ form button {
   padding: 10px;
   color: white;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
   
 }
 form button:focus {
@@ -80,4 +85,7 @@ form button:active {
   background-color: #F5F1F1;
   border-radius: 15px;
   margin-left: 4%;
+  min-width: 15px;
+  max-width: 220px;
+  padding-right: 30px;
 }
