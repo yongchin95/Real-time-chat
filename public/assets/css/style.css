@@ -94,3 +94,19 @@ button p {
   width: 50vw;
 
 }
+
+@media screen and (min-width: 1200px) {
+  body {
+    grid-template-columns: auto auto auto;
+  }
+  header {
+    grid-column: 2;
+  }
+  #messages {
+    grid-column:2;
+  }
+  form {
+    grid-column:2;
+  }
+
+}
