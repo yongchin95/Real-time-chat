@@ -6,6 +6,10 @@ A team project with Mongoose DB, socket.io, node.js and JS at Becode
 * [Project](#Project)
 * [Duration](#Duration)
 * [Mock-up](#Mock-up)
+  * [Papper](#Papper)
+  * [Figma](#Figma)
+* [Organization](#Organization)
+  * [Trello](#Trello)
 * [Technology](#Technology)
   * [Front-End](#Front-End)
   * [Back-End](#Back-End)
@@ -39,10 +43,10 @@ We will evaluate our project based on:
 
 You can see the instructions 
 
-<p align="left">
+<p align="center">
    <img src="/public/assets/img/Instruction1.png" alt="Instructions1" width="50%" />
  
- <p align="right">
+ <p align="center">
    <img src="/public/assets/img/instruction2.png" alt="instructions2" width="50%" />
 
 ## Duration
@@ -60,7 +64,9 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 <p align="center">
    <img src="/public/assets/img/mockup-real-time-chat.png" alt="maquette figma" width="80%" />
  
-## Organisation
+## Organization
+
+### Trello
 
 <p align="center">
    <img src="/public/assets/img/trello-real-time-chat.png" alt="instructions" width="80%" />
@@ -79,9 +85,12 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 * Express.js
 * Socket.IO
 
-# Source
-- Developper Mozilla
-- w3school
-- Node.js docs
-- mongodb docs
-- socket.io docs
+## Source
+- Developper Mozilla(https://developer.mozilla.org/en-US/)
+- w3school(https://www.w3schools.com)
+- Node.js docs(https://nodejs.org/en/docs/)
+- mongodb docs(https://docs.mongodb.com/)
+- socket.io docs(https://socket.io/docs/)
+
+<p align="center">
+   <img src="" alt="https://media.giphy.com/media/VObHs6oqEWFNe/giphy.gif" width="50%" />
