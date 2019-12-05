@@ -39,11 +39,11 @@ We will evaluate our project based on:
 
 You can see the instructions 
 
-<p align="center">
-   <img src="/public/assets/img/instruction1.png" alt="instructions1" width="50%" />
+<p align="left">
+   <img src="/public/assets/img/instruction1.png" alt="Instructions1" width="75%" />
  
- <p align="center">
-   <img src="/public/assets/img/instruction2.png" alt="instructions2" width="50%" />
+ <p align="right">
+   <img src="/public/assets/img/instruction2.png" alt="instructions2" width="75%" />
 
 ## Duration
 We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
@@ -53,17 +53,17 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 ### Papper
 
 <p align="center">
-   <img src="/public/assets/img/maquette.png" alt="maquette papier" width="50%" />
+   <img src="/public/assets/img/maquette.jpg" alt="maquette papier" width="80%" />
  
 ### Figma
 
 <p align="center">
-   <img src="/public/assets/img/mockup-real-time-chat.png" alt="maquette figma" width="50%" />
+   <img src="/public/assets/img/mockup-real-time-chat.png" alt="maquette figma" width="80%" />
  
 ## Organisation
 
 <p align="center">
-   <img src="/public/assets/img/trello-real-time-chat.png" alt="instructions" width="50%" />
+   <img src="/public/assets/img/trello-real-time-chat.png" alt="instructions" width="80%" />
  
 ## Technology
 
