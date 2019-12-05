@@ -95,5 +95,6 @@ snakeDotIo.on('connection', function (socket) {
   console.log('a player is here to play the best game ever');
   socket.on('moving', (x, y) => {
     console.log(x, y);
+    snakeDotIo.emit('snakesPosition', x, y);
   })
 });

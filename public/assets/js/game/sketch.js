@@ -1,6 +1,8 @@
 const socket = io('/snake.html');
 
-
+socket.on('snakesPosition', (x, y) => {
+    console.log("Received position");
+})
 
 
 
