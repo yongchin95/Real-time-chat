@@ -40,7 +40,7 @@ We will evaluate our project based on:
 You can see the instructions 
 
 <p align="center">
-   <img src="/assets/img/trello-real-time-chat.png" alt="instructions" width="30%" />
+   <img src="/public/assets/img/trello-real-time-chat.png" alt="instructions" width="30%" />
 
 ## Duration
 We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
