@@ -8,6 +8,7 @@ A team project with Mongoose DB, socket.io, node.js and JS at Becode
 * [Mock-up](#Mock-up)
   * [Papper](#Papper)
   * [Figma](#Figma)
+* [Chat command](#Chat command)
 * [Organization](#Organization)
   * [Trello](#Trello)
 * [Technology](#Technology)
@@ -64,6 +65,12 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 <p align="center">
    <img src="/public/assets/img/mockup-real-time-chat.png" alt="maquette figma" width="80%" />
  
+### Chat command: 
+* !drawing : open a drawing canva and you can draw with your friend!
+
+<p align="center">
+   <img src="https://media.giphy.com/media/dCFPa8FjQUltMmxlAS/giphy.gif" alt="drawing" width="80%" />
+
 ## Organization
 
 ### Trello
