@@ -32,17 +32,18 @@ $('form').submit(async function(e){
                 },
                 body:JSON.stringify(data)
             };
-//opions est un objet
+//options est un objet
             console.log(options);
             await fetch('/send', options)
 
             return false;
     });
-//récupérer l'event chat message emis par le server    
+//récupérer l'event chat message emis par le server  
 socket.on('chat message', function(msg){
-        $('#messages').html(msg);
+
+        $('#messages').append($("<div>").html(msg));
     });
 socket.on('dbqueryall', (allContent) => {
-        $('#messages').append($('<li>').text(msg));
+        //$('#messages').append($('<li>').text(msg));
     });
 

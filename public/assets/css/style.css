@@ -1,83 +1,128 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+
+
 body {
   display: grid;
-  grid-template-columns: 2fr 5fr 2fr;
-  font: 13px Helvetica, Arial;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.54);
-  
+  /* grid-template-columns: auto auto auto; */
+  grid-template-rows: 10vh 80vh 10vh;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Ropa Sans', sans-serif;
+
 }
 
 header {
-  background-color: #09C1A0;
+  display: flex;
+  align-items: center;
+  background-color:#09C1A0;
   color: white;
-  z-index: 9999;
-  grid-column:2/3;
-  grid-row:1;
+  /* grid-column: 2; */
+  grid-row: 1;
 }
+
+
 header h1 {
-  font-weight: 75px;
-  font-family: 'Roboto', sans-serif;
+  margin-left: 20px;
+  /* grid-column: 2  ; */
+  grid-row: 1;
+  font-size: 50px;
+ 
+}
+
+#messages {
+  /* grid-column: 2; */
+  grid-row: 2;
+  margin-top:20px;
+  color:rgba(0, 0, 0, 0.54);
 
 }
 
 form {
-  padding: 2px;
-  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* grid-column: 2; */
   grid-row: 3;
-  background-color: white;
-}
-form input {
-  border: 0;
-  padding: 20px;
-  width:75%;
-  margin-right: 2%;
-  margin-left: 4%;
-  background-color:#F5F1F1;
-  border-radius: 15px;
-  margin-bottom: 3%;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.54);
-}
-form input:focus{
-  outline: none;
-}
-form button {
-
-  background-color: #09C1A0;
-  border: none;
-  padding: 10px;
-  color: white;
-  border-radius: 50%;
   
 }
-form button:focus {
+
+input {
+  background-color:#F5F1F1;
+  border-radius: 15px;
+  padding: 20px 20px;
+  border:none;
+  width: 50vw;
+  font-size: 17px;
+  color:rgba(0, 0, 0, 0.54);
+
+}
+
+input:focus{
   outline: none;
+
 }
 
+button {
+  display: flex;
+  flex-direction: row;
+  background-color:#09C1A0;
+  border-radius: 15px;
+  border: none;
+  width: 90px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 10px;
 
-form button:active {
-  background-color: rgb(6, 141, 116);
+
 }
-
 .sendingImg {
-  width: auto;
-  height: auto;
+  height: 40%;
+  width: 40%;
+  margin-top: 2%;
 }
-#messages {
-  list-style-type: none;
+
+button p {
   margin: 0;
   padding: 0;
-  grid-column: 2;
-  grid-row: 2;
 }
+
 #messages p {
-  margin-top: 2%;
-  padding: 15px 20px;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+#messages div {
   background-color: #F5F1F1;
+  margin-right: 0;
+  border: none;
   border-radius: 15px;
-  margin-left: 4%;
+  padding: 15px 20px;
+  max-width: 80vw;
+  width: fit-content;
+  margin-top: 1vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    grid-template-columns:  15vw  70vw 15vw;
+  }
+  header {
+    grid-column: 2;
+  }
+  #messages {
+    grid-column:2;
+  }
+  form {
+    grid-column:2;
+  }
+  #messages div {
+    max-width: 50vw;
+  }
+
 }
