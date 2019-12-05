@@ -69,7 +69,7 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 * !drawing : open a drawing canva and you can draw with your friend!
 
 <p align="center">
-   <img src="https://media.giphy.com/media/dCFPa8FjQUltMmxlAS/giphy.gif" alt="drawing" width="80%" />
+   <img src="https://media.giphy.com/media/dCFPa8FjQUltMmxlAS/giphy.gif" alt="gif-drawing" width="50%" />
 
 ## Organization
 
