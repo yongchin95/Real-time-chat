@@ -40,13 +40,31 @@ We will evaluate our project based on:
 You can see the instructions 
 
 <p align="center">
-   <img src="/public/assets/img/trello-real-time-chat.png" alt="instructions" width="30%" />
+   <img src="/public/assets/img/instruction1.png" alt="instructions1" width="50%" />
+ 
+ <p align="center">
+   <img src="/public/assets/img/instruction2.png" alt="instructions2" width="50%" />
 
 ## Duration
 We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 
 ## Mock-up
 
+### Papper
+
+<p align="center">
+   <img src="/public/assets/img/maquette.png" alt="maquette papier" width="50%" />
+ 
+### Figma
+
+<p align="center">
+   <img src="/public/assets/img/mockup-real-time-chat.png" alt="maquette figma" width="50%" />
+ 
+## Organisation
+
+<p align="center">
+   <img src="/public/assets/img/trello-real-time-chat.png" alt="instructions" width="50%" />
+ 
 ## Technology
 
 ### Front-End
