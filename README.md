@@ -40,10 +40,10 @@ We will evaluate our project based on:
 You can see the instructions 
 
 <p align="left">
-   <img src="/public/assets/img/instruction1.png" alt="Instructions1" width="75%" />
+   <img src="/public/assets/img/Instruction1.png" alt="Instructions1" width="50%" />
  
  <p align="right">
-   <img src="/public/assets/img/instruction2.png" alt="instructions2" width="75%" />
+   <img src="/public/assets/img/instruction2.png" alt="instructions2" width="50%" />
 
 ## Duration
 We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
@@ -53,7 +53,7 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 ### Papper
 
 <p align="center">
-   <img src="/public/assets/img/maquette.jpg" alt="maquette papier" width="80%" />
+   <img src="/public/assets/img/maquette.jpg" alt="maquette papier" width="50%" />
  
 ### Figma
 
