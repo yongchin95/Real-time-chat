@@ -1,91 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+
+
 body {
   display: grid;
-  grid-template-columns: 2fr 5fr 2fr;
-  font: 13px Helvetica, Arial;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.54);
-  height: 100%;
-  
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto 80% auto;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Ropa Sans', sans-serif;
+
 }
 
 header {
-  background-color: #09C1A0;
+  background-color:#09C1A0;
   color: white;
-  z-index: 9999;
-  grid-column:2/3;
-  grid-row:1;
-  padding: 12px;
+  grid-column: 2;
+  grid-row: 1;
 }
+
+
 header h1 {
-  font-weight: 75px;
-  font-family: 'Roboto', sans-serif;
+  margin-left: 20px;
+  grid-column: 2  ;
+  grid-row: 1;
+  font-size: 50px;
+ 
+}
+
+#messages {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top:20px;
+  color:rgba(0, 0, 0, 0.54);
 
 }
 
 form {
-  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-column: 2;
   grid-row: 3;
-  background-color: white;
-  bottom: 0px;
-}
-form input {
-  border: 0;
-  padding: 20px;
-  width:75%;
-  margin-right: 2%;
-  margin-left: 4%;
-  background-color:#F5F1F1;
-  border-radius: 15px;
-  margin-bottom: 3%;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.54);
-}
-form input:focus{
-  outline: none;
-}
-form button {
-
-  background-color: #09C1A0;
-  border: none;
-  padding: 10px;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
   
 }
-form button:focus {
-  outline: none;
-}
 
-
-form button:active {
-  background-color: rgb(6, 141, 116);
-}
-
-.sendingImg {
-  width: auto;
-  height: auto;
-}
-#messages {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-column: 2;
-  grid-row: 2;
-}
-#messages p {
-  margin-top: 2%;
-  padding: 15px 20px;
-  background-color: #F5F1F1;
+input {
+  background-color:#F5F1F1;
   border-radius: 15px;
-  margin-left: 4%;
-  min-width: 15px;
-  max-width: 220px;
-  padding-right: 30px;
+  padding: 20px 20px;
+  border:none;
+  width: 50vw;
+  font-size: 17px;
+  color:rgba(0, 0, 0, 0.54);
+
+}
+
+input:focus{
+  outline: none;
+
+}
+
+button {
+  background-color:#09C1A0;
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+
+}
+
+#messages p {
+  background-color: #F5F1F1;
+  border: none;
+  border-radius: 15px;
+  padding: 20px 20px;
+  font-size: 17px;
+  width: 50vw;
+
 }
