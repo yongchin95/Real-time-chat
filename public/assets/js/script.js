@@ -70,3 +70,5 @@ function scrollToEnd() {
   const container = document.getElementById("messages");
   container.scrollTop = container.scrollHeight;
 }
+
+document.getElementById("username").innerText = "Welcome, " + pseudo;
