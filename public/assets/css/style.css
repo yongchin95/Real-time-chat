@@ -8,12 +8,21 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  background-color: #09c1a0;
+  display: grid;
+  background-color: #09C1A0;
   color: white;
   /* grid-column: 2; */
   grid-row: 1;
+}
+header p {
+  align-self: flex-end;
+  justify-self: flex-end;
+  grid-row: 1;
+  margin: 0;
+  font-size:15px;
+  padding-right: 1vw;
+  font-size: 30px;
+
 }
 
 header h1 {
@@ -21,6 +30,12 @@ header h1 {
   /* grid-column: 2  ; */
   grid-row: 1;
   font-size: 50px;
+  align-self: center;
+  justify-self: flex-start;
+  margin: 0;
+  padding: 0;
+
+
 }
 
 #messages {
@@ -52,6 +67,9 @@ input {
 input:focus {
   outline: none;
 }
+button:focus {
+  outline: none;
+}
 
 button {
   display: flex;
@@ -65,6 +83,13 @@ button {
   font-size: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: 10px;
+  transition: background-color 1s ease-out;
+
+
+}
+button:hover {
+  background-color:rgb(8, 134, 111);
+  cursor: pointer;
 }
 
 .sendingImg {
