@@ -1,15 +1,21 @@
 body {
   display: grid;
   /* grid-template-columns: auto auto auto; */
-  grid-template-rows: 10vh 80vh 10vh;
   min-height: 100vh;
   margin: 0;
   font-family: "Ropa Sans", sans-serif;
 }
 
+container {
+  /* grid-column: 2 /3; */
+  grid-row: 1 / 4;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+}
 header {
   display: grid;
-  background-color: #09C1A0;
+  background-color: #09c1a0;
   color: white;
   /* grid-column: 2; */
   grid-row: 1;
@@ -19,14 +25,12 @@ header p {
   justify-self: flex-end;
   grid-row: 1;
   margin: 0;
-  font-size:15px;
+  font-size: 15px;
   padding-right: 1vw;
   font-size: 30px;
-
 }
 
 header h1 {
-  margin-left: 20px;
   /* grid-column: 2  ; */
   grid-row: 1;
   font-size: 50px;
@@ -34,8 +38,7 @@ header h1 {
   justify-self: flex-start;
   margin: 0;
   padding: 0;
-
-
+  margin-left: 1vw;
 }
 
 #messages {
@@ -84,11 +87,9 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: 10px;
   transition: background-color 1s ease-out;
-
-
 }
 button:hover {
-  background-color:rgb(8, 134, 111);
+  background-color: rgb(8, 134, 111);
   cursor: pointer;
 }
 
@@ -137,17 +138,11 @@ button p {
   body {
     grid-template-columns: 15vw 70vw 15vw;
   }
-
-  header {
-    grid-column: 2;
-  }
-
-  #messages {
-    grid-column: 2;
-  }
-
-  form {
-    grid-column: 2;
+  container {
+    grid-column: 2/3;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
   }
 
   #messages div {
