@@ -72,5 +72,4 @@ function scrollToEnd() {
   container.scrollTop = container.scrollHeight;
 }
 
-    document.getElementById("username").innerText ="Welcome, " + pseudo;
-
+document.getElementById("username").innerText = "Welcome, " + pseudo;
