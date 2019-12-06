@@ -8,7 +8,8 @@ const getdata = async () => {
 getdata();
 
 //récupérer le pseudo de l'utilisateur
-let pseudo = window.prompt("Indiquez votre pseudo", "anonymous");
+
+let pseudo = window.prompt("Indiquez votre pseudo");
 if (pseudo != "") {
   console.log(pseudo);
   socket.emit("pseudo", pseudo);
