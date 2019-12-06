@@ -65,11 +65,16 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 <p align="center">
    <img src="/public/assets/img/mockup-real-time-chat.png" alt="maquette figma" width="80%" />
  
-### Chat-command: 
+### Chat-command 
 * !drawing : open a drawing canva and you can draw with your friend!
 
 <p align="center">
    <img src="/public/assets/img/bonhomme.gif" alt="drawing" width="50%" />
+ 
+### Chat client view
+
+<p align="center">
+   <img src="/public/assets/img/chat client view.jpg" alt="client view" width="80%" />
 
 ## Organization
 
