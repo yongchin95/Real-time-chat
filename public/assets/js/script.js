@@ -27,6 +27,7 @@ $("form").submit(async function(e) {
   $("#m").val("");
   //creation du timestamp
   let time = Math.floor(Date.now());
+
   console.log(time);
   //ceci va être recupéré serverside en faisant req.body.username par ex et fourré dans le modelschema
   const data = {
@@ -49,6 +50,11 @@ $("form").submit(async function(e) {
 
   return false;
 });
+
+socket.on("chat connect", function(pseudoserver) {
+  $("#messages").append($("<div class='connect'>").html(pseudoserver));
+});
+
 //récupérer l'event chat message emis par le server
 socket.on("chat message", function(msg) {
   $("#messages").append($("<div>").html(msg));

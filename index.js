@@ -84,7 +84,10 @@ io.on("connection", function(socket) {
   let pseudo = "";
   const stockagepseudo = function(clientvar) {
     const pseudoserver = clientvar;
-    io.emit("chat message", marked(pseudoserver + " *just connected*"));
+    socket.broadcast.emit(
+      "chat connect",
+      marked(pseudoserver + " *just connected*")
+    );
     pseudo = pseudoserver;
   };
 
