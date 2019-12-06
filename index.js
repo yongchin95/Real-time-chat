@@ -84,9 +84,10 @@ io.on("connection", function(socket) {
   let pseudo = "";
   const stockagepseudo = function(clientvar) {
     const pseudoserver = clientvar;
-    io.emit("chat message", marked("*Bienvenue* " + pseudoserver));
+    io.emit("chat message", marked(pseudoserver+ " *just connected*"));
     pseudo = pseudoserver;
   };
+  
   //fonction lancée en cas d'event pseudo
   socket.on("pseudo", stockagepseudo);
   //ce qu'il se passe en cas de déconnection
