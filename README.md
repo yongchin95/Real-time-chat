@@ -1,6 +1,9 @@
 # Real-time-chat
 A team project with Mongoose DB, socket.io, node.js and JS at Becode
 
+<p align="center">
+   <img src="/public/assets/img/chat client view.jpg" alt="client view" width="80%" />
+
 ## Table of contents
 * [Team](#Team)
 * [Project](#Project)
@@ -70,11 +73,6 @@ We had 4 days to work on this project from 02/12/2019 to 05/12/2019.
 
 <p align="center">
    <img src="/public/assets/img/bonhomme.gif" alt="drawing" width="50%" />
- 
-### Chat client view
-
-<p align="center">
-   <img src="/public/assets/img/chat client view.jpg" alt="client view" width="80%" />
 
 ## Organization
 
