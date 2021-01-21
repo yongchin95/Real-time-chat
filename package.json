@@ -29,6 +29,6 @@
     "marked": "^0.7.0",
     "mongoose": "^5.7.13",
     "nodemon": "^2.0.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
